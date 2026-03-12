@@ -156,7 +156,7 @@ export default function CreatorStudio() {
         </div>
         <div className="glass-panel p-6 rounded-xl border border-gray-800">
           <div className="text-gray-400 text-sm font-medium mb-1">Subscribers</div>
-          <div className="text-3xl font-bold text-white">{(currentUser.channelId ? channels[currentUser.channelId]?.subscribers?.toLocaleString() : "0") || "0"}</div>
+          <div className="text-3xl font-bold text-white">{(currentUser.channelId ? (channels || {})[currentUser.channelId]?.subscribers?.toLocaleString() : "0") || "0"}</div>
           <div className="text-emerald-500 text-sm mt-2">Channel following</div>
         </div>
       </div>
